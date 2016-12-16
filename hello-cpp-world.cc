@@ -1,21 +1,19 @@
-#include <iostream>
-#include <ctime>
 #include <cstdlib>
+#include <ctime>
+#include <iostream>
 
 using namespace std;
- 
-int main () {
-   int i,j;
- 
-   // set the seed
-   srand( (unsigned)time( NULL ) );
 
-   /* generate 10  random numbers. */
-   for( i = 0; i < 10; i++ ) {
-      // generate actual random number
-      j= rand();
-      cout <<" Random Number : " << j << endl;
-   }
+ 
 
-   return 0;
+int main() {
+
+     srand(time(NULL));
+
+     cout <<  "Lotto Number\t" << rand() % 999999 + 100000 << endl;  //number between 1 and 10
+
+ 
+
+     return 0;
+
 }
