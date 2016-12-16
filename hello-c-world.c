@@ -1,11 +1,21 @@
 #include <stdio.h>
-#include <time.h>
 #include <stdlib.h>
+#include <time.h>
+int main()
+{
+   int i, n;
+   time_t t;
+   
+   n = 5;
+   
+   /* Intializes random number generator */
+   srand((unsigned) time(&t));
 
-int main(void) {
-   int i;
-   srand(time(0));
-   for(i=0;i<100;i++) printf(" %d",rand()%100+1);
-   putchar('\n');
-   return 0;
+   /* Print 5 random numbers from 0 to 49 */
+   for( i = 0 ; i < n ; i++ ) 
+   {
+      printf("%d\n", rand() % 999999);
+   }
+   
+   return(0);
 }
